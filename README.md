@@ -106,7 +106,7 @@ depend on the machine and change slightly between runs.
 | عبد العليم الشيخ | abdil_aliem_196295 | C2 | experiment runner, timing, memory, statistics (`experiments.py`, `base.py`, `stats.py`) |
 | عطاف عثمان | Etaf_154254 | C4 | figures and analysis (`plotting.py`) |
 | منى جندلي | mona_187366 | C1 | configuration, sensitivity study, documentation (`config.py`, README) |
-
+| نغم الشامي | nagham_191378| C7 | Report writing, formatting, and results verification |
 The full Arabic report is in `../report/`.
 
 ## Key results (mean gap to the optimum over 10 runs)
