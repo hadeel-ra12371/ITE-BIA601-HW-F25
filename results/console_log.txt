@@ -1,0 +1,84 @@
+
+=== SMALL  (n=30, budget=868) ===
+  DP      value=1063    time=0.0002s  mem=0.05MB
+  Greedy  value=1063    time=0.0000s  mem=0.00MB
+  GA      mean=1062.5 std=1.50 best=1063 time=0.007s
+  PSO     mean=1063.0 std=0.00 best=1063 time=0.010s
+  ACO     mean=1060.0 std=2.45 best=1063 time=0.014s
+  HGA     mean=1063.0 std=0.00 best=1063 time=0.009s
+  test   GA vs PSO  p=0.3681 winner=none
+  test   GA vs ACO  p=0.0252 winner=GA
+  test   GA vs HGA  p=0.3681 winner=none
+  test  PSO vs ACO  p=0.0050 winner=PSO
+  test  PSO vs HGA  p=1.0000 winner=none
+  test  ACO vs HGA  p=0.0050 winner=HGA
+
+=== MEDIUM  (n=150, budget=3751) ===
+  DP      value=4791    time=0.0011s  mem=0.63MB
+  Greedy  value=4768    time=0.0000s  mem=0.00MB
+  GA      mean=4783.9 std=4.44 best=4791 time=0.025s
+  PSO     mean=4693.2 std=6.76 best=4701 time=0.049s
+  ACO     mean=4785.0 std=4.90 best=4791 time=0.176s
+  HGA     mean=4791.0 std=0.00 best=4791 time=0.033s
+  test   GA vs PSO  p=0.0001 winner=GA
+  test   GA vs ACO  p=0.5570 winner=none
+  test   GA vs HGA  p=0.0005 winner=HGA
+  test  PSO vs ACO  p=0.0001 winner=ACO
+  test  PSO vs HGA  p=0.0001 winner=HGA
+  test  ACO vs HGA  p=0.0050 winner=HGA
+
+=== LARGE  (n=600, budget=16682) ===
+  DP      value=20742   time=0.0129s  mem=9.95MB
+  Greedy  value=20685   time=0.0001s  mem=0.01MB
+  GA      mean=20697.9 std=14.88 best=20712 time=0.217s
+  PSO     mean=20114.8 std=19.21 best=20146 time=0.376s
+  ACO     mean=20682.3 std=8.06 best=20692 time=2.306s
+  HGA     mean=20742.0 std=0.00 best=20742 time=0.324s
+  test   GA vs PSO  p=0.0002 winner=GA
+  test   GA vs ACO  p=0.0086 winner=GA
+  test   GA vs HGA  p=0.0001 winner=HGA
+  test  PSO vs ACO  p=0.0002 winner=ACO
+  test  PSO vs HGA  p=0.0001 winner=HGA
+  test  ACO vs HGA  p=0.0001 winner=HGA
+
+------------------------------------------------------------------------------------------------
+size   alg         best      mean     std    gap%   hit%   time(s)  mem(MB)  it->99%
+small  DP          1063    1063.0    0.00   0.000    100    0.0002     0.05        -
+small  Greedy      1063    1063.0    0.00   0.000    100    0.0000     0.00        -
+small  GA          1063    1062.5    1.50   0.047     90    0.0074     0.04      6.8
+small  PSO         1063    1063.0    0.00   0.000    100    0.0096     0.10     12.1
+small  ACO         1063    1060.0    2.45   0.282     40    0.0139     0.05      1.3
+small  HGA         1063    1063.0    0.00   0.000    100    0.0091     0.03      0.0
+medium DP          4791    4791.0    0.00   0.000    100    0.0011     0.63        -
+medium Greedy      4768    4768.0    0.00   0.480      0    0.0000     0.00        -
+medium GA          4791    4783.9    4.44   0.148     20    0.0254     0.15     24.4
+medium PSO         4701    4693.2    6.76   2.041      0    0.0485     0.48        -
+medium ACO         4791    4785.0    4.90   0.125     40    0.1763     0.20     29.6
+medium HGA         4791    4791.0    0.00   0.000    100    0.0329     0.29      0.0
+large  DP         20742   20742.0    0.00   0.000    100    0.0129     9.95        -
+large  Greedy     20685   20685.0    0.00   0.275      0    0.0001     0.01        -
+large  GA         20712   20697.9   14.88   0.213      0    0.2168     0.61     88.0
+large  PSO        20146   20114.8   19.21   3.024      0    0.3760     1.90        -
+large  ACO        20692   20682.3    8.06   0.288      0    2.3065     0.78     96.8
+large  HGA        20742   20742.0    0.00   0.000    100    0.3239     2.68      0.0
+
+=== Hyperparameter sensitivity (medium instance) ===
+  GA mutation_rate=0.002    mean=4759.0 gap=0.668%
+  GA mutation_rate=0.006667 mean=4783.0 gap=0.167%
+  GA mutation_rate=0.02     mean=4787.0 gap=0.083%
+  GA mutation_rate=0.05     mean=4752.2 gap=0.810%
+  PSO v_max=2        mean=4668.8 gap=2.551%
+  PSO v_max=4        mean=4688.8 gap=2.133%
+  PSO v_max=6        mean=4697.8 gap=1.945%
+  ACO beta=0        mean=4783.0 gap=0.167%
+  ACO beta=1        mean=4783.0 gap=0.167%
+  ACO beta=2        mean=4787.0 gap=0.083%
+  ACO beta=4        mean=4785.0 gap=0.125%
+
+=== DP scaling with budget size ===
+  DP cost x1   C=16682    time=0.016s mem=9.9MB
+  DP cost x5   C=83410    time=0.068s mem=49.7MB
+  DP cost x10  C=166820   time=0.410s mem=99.4MB
+  DP cost x20  C=333640   time=0.860s mem=198.9MB
+
+Saved: D:\SVU\SVU\Homeworks-students\F25\amal\optimization_project\results\summary.csv, D:\SVU\SVU\Homeworks-students\F25\amal\optimization_project\results\raw_results.json, D:\SVU\SVU\Homeworks-students\F25\amal\optimization_project\results\figures
